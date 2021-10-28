@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import pricing from '../../../data/pricing.json';
 // import styles from './OrderForm.scss';
 import OrderSummary from '../OrderSummary/OrderSummary';
-import OrderOptions from '../OrderOption/OrderOption';
+import OrderOption from '../OrderOption/OrderOption';
 
 const OrderForm = props => {
 console.log(props, 'abc')
@@ -13,7 +13,7 @@ console.log(props, 'abc')
   <Row>
     {pricing.map((price) =>  
     <Col md={4} key={price.id}>
-      <OrderOptions price={price} />
+      <OrderOption {...price} />
     </Col>)}
     <Col xs={12}>
       <OrderSummary tripCost={props.tripCost} options = {props.options} />
