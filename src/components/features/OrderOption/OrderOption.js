@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './OrderOption.module.scss';
-import PropTypes from 'prop-types';
 import OrderOptionCheckboxes from './OrderOptionCheckboxes';
 import OrderOptionDropdown from './OrderOptionDropdown';
 import OrderOptionNumber from './OrderOptionNumber';
 import OrderOptionIcons from './OrderOptionIcons';
+
 
 const optionTypes = {
     dropdown: OrderOptionDropdown,
