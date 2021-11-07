@@ -11,6 +11,7 @@ describe('Component TripSummary', () => {
         expect(component).toBeTruthy();
         expect(renderLink).toEqual(expectedLink);
     })
+
     it('should image has correct src and alt', () => {
         const expectSrc = 'image.jpg';
         const expectAlt = 'description';
@@ -34,7 +35,18 @@ describe('Component TripSummary', () => {
         const renderedDays = component.find('.days').text();
         expect(renderedDays).toEqual(expectDays + ' days');
     });
+
     it('should throw error without required props', () => {
         expect(() => shallow(<TripSummary />)).toThrow();
-    })
-})
+    });
+
+    it('should', () => {
+        const arrayTags = ['Lorem', 'Ipsum', 'lorem'];
+        
+        const component = shallow(<TripSummary id='abc' image='' name='' cost='' days={1} tags={arrayTags} />);
+        console.log(component.debug())
+        expect(component.find('.tag').at(1).text()).toEqual(arrayTags[1]);
+        expect(component.find('.tag').at(0).text()).toEqual(arrayTags[0]);
+        expect(component.find('.tag').at(2).text()).toEqual(arrayTags[2]);
+    });
+});
