@@ -40,11 +40,10 @@ describe('Component TripSummary', () => {
         expect(() => shallow(<TripSummary />)).toThrow();
     });
 
-    it('should', () => {
+    it('should render tags in span', () => {
         const arrayTags = ['Lorem', 'Ipsum', 'lorem'];
         
         const component = shallow(<TripSummary id='abc' image='' name='' cost='' days={1} tags={arrayTags} />);
-        console.log(component.debug())
         expect(component.find('.tag').at(1).text()).toEqual(arrayTags[1]);
         expect(component.find('.tag').at(0).text()).toEqual(arrayTags[0]);
         expect(component.find('.tag').at(2).text()).toEqual(arrayTags[2]);
