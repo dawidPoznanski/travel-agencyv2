@@ -196,7 +196,7 @@ for(let type in optionTypes){
           expect(dateComponent.length).toBe(1);
           expect(dateComponent.prop('selected')).toBe(mockProps.currentValue);
         });
-        it.only('should run setOrderOption function on change', () => {
+        it('should run setOrderOption function on change', () => {
           renderedSubcomponent.find(DatePicker).simulate('change',  testValue);
           expect(mockSetOrderOption).toBeCalledTimes(1);
           expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue });

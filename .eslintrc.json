@@ -20,5 +20,8 @@
     ],
     "rules": {
         "react/prop-types": "off"
+    },
+    "globals": {
+        "global": true
     }
 }

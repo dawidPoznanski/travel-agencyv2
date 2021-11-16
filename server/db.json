@@ -387,6 +387,57 @@
         ]
       },
       "id": 7
+    },
+    {
+      "car-rental": "suv",
+      "accommodation": "house",
+      "features": [
+        "pool"
+      ],
+      "adults": "3",
+      "children": "1",
+      "name": "Fabulous swing in strange Viet Nam",
+      "contact": "sadsadsad",
+      "start-date": "2021-11-15T23:00:00.000Z",
+      "totalCost": "$41,136",
+      "tripId": "5cc1d101b5c152e861b59e67",
+      "country": {
+        "currencies": [
+          {
+            "code": "VND",
+            "name": "Vietnamese đồng",
+            "symbol": "₫"
+          }
+        ],
+        "languages": [
+          {
+            "iso639_1": "vi",
+            "iso639_2": "vie",
+            "name": "Vietnamese",
+            "nativeName": "Tiếng Việt"
+          }
+        ],
+        "flag": "https://restcountries.com/data/vnm.svg",
+        "name": "Viet Nam",
+        "alpha2Code": "VN",
+        "alpha3Code": "VNM",
+        "capital": "Hanoi",
+        "region": "Asia",
+        "subregion": "South-Eastern Asia",
+        "population": 92700000,
+        "timezones": [
+          "UTC+07:00"
+        ],
+        "borders": [
+          "KHM",
+          "CHN",
+          "LAO"
+        ],
+        "trips": [
+          "5cc1d101b5c152e861b59e67"
+        ]
+      },
+      "id": 8
     }
   ]
 }
