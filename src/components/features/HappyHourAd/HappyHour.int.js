@@ -12,29 +12,6 @@ const mockProps = {
     promoDescription: 'Promotion',
 }
 
-
-describe('Component HappyHourAd', () => {
-    it('should render without crash', () => {
-        const component = shallow(<HappyHourAd />);
-        console.log(component.debug());
-        expect(component).toBeTruthy();
-    })
-    it('should render title and coundown components', () => {
-        const component = shallow(<HappyHourAd />);
-
-        expect(component.exists(select.title)).toEqual(true);
-        expect(component.exists(select.descr)).toEqual(true);
-    })
-    // Chyba do poprawy szczególnie branie title z propsa w komponensie HappyHourAd
-    it('should render title form props', () => {
-        const component = shallow(<HappyHourAd {...mockProps} />);
-        const expetedTitle = mockProps.title;
-        const renderedTitle = component.find('.title').text()
-        console.log(component.debug());
-        expect(renderedTitle).toEqual(expetedTitle);
-    });
-})
-
 const trueDate = Date;
 const mockDate = customDate => class extends Date {
     constructor(...args) {
@@ -51,7 +28,6 @@ const mockDate = customDate => class extends Date {
       }
     
 };
-
 describe('Component HappyHourAd with mocked Date', () => {
    
     // switch class Date
@@ -119,10 +95,6 @@ describe('Component HappyHourAd with mocked Date', () => {
         checkDescriptionAfterTime('12:57:58', 2, mockProps.promoDescription);
         checkDescriptionAfterTime('11:59:59', 1, mockProps.promoDescription);
         checkDescriptionAfterTime('13:00:00', 60 * 60, 22 * 60 * 60 + '');
-      });
-      beforeAll(() => {
-        const utilsModule = jest.requireActual('../../../utils/formatTime.js');
-        utilsModule.formatTime = jest.fn(seconds => seconds);
       });
 });
 
