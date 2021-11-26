@@ -20,12 +20,12 @@ class DaysToSummer extends React.Component {
 
         const isVacation = 
             (
-                // today.getUTCMonth()<=7 || 
+                today.getUTCMonth()<=7 || 
                 (today.getUTCMonth() <= 8 && today.getUTCDate() <= 24 )
             ) 
               && 
             (
-                // today.getUTCMonth() >=6 || 
+                today.getUTCMonth() >=6 || 
                 (today.getUTCMonth() >= 5 && today.getUTCDate() >= 22)
             )
 
